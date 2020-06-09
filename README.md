@@ -1,2 +1,2 @@
 # learning-notes
-Record something that interests me
+Record something that interests me.
