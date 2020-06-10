@@ -1,10 +1,36 @@
 # Git
+安装Git
+下载安装或者使用Homebrew安装
+```
+brew install git
+
+git --version
+```
+
 配置用户信息
 ```
 git config --global user.name "your.username"
 git config --global user.email "your.email"
 ```
 这些配置可以在 .gitconfig 文件中找到
+
+config的三个作用域
+```
+git config --local # local只对某个仓库有效，缺省等同于local
+git config --global # global对当前用户所有仓库有效
+git config --system # system对系统所有登录的用户有效
+```
+显示config的配置，加上--list
+```
+git config --list --local
+git config --list --global
+git config --list --system
+```
+作用域的优先级
+local>global
+额外设置的local用户优先于global
+
+
 
 将 ssh 添加到 GitHub 账户
 ```
@@ -68,6 +94,25 @@ git config --global --unset https.proxy
 国内用户可以使用码云（gitee）
 
 
+## 创建Git仓库
+两种场景
+1. 把已有的项目代码纳入Git管理
+```
+cd your_folder
+git init
+```
+
+2. 新建的项目直接用Git管理
+```
+cd your_folder
+git init your_project # 会在当前路径下创建和项目同名文件夹
+cd your_project
+```
+.git文件到底有什么？
+
+
+
+## 工作区和暂存区
 
 
 
