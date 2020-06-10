@@ -1,10 +1,10 @@
-# Java 开发环境配置（macOS）
+# 开发环境配置（macOS）
 
 ## Homebrew
 
 Homebrew 是 macOS 下的包管理软件。
 
-Homebrew 网址：https://brew.sh/index_zh-cn
+Homebrew 官方网址：https://brew.sh/index_zh-cn
 
 将以下命令复制到终端执行
 
@@ -12,6 +12,42 @@ Homebrew 网址：https://brew.sh/index_zh-cn
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
+## 配置 iterm2+zsh+oh-my-zsh
+可以使用homebrew安装iterm2，也可以直接去官网上下载软件安装包。
+```
+brew search iterm2
+brew install iterm2
+```
+
+切换shell为zsh
+```
+# 查看所有的shell
+cat /etc/shells
+
+# 查看当前的shell
+echo $SHELL
+
+# 切换shell为zsh
+chsh -s $(which zsh)
+```
+
+安装oh-my-zsh
+[oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)，官方介绍了几种安装方法
+通过 curl
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+通过wget
+```
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+手动安装
+```
+curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh
+``
 
 
 **注意：**因为安装 Homebrew 连接的是国外服务器，经常出现安装失败或者安装很慢的问题
@@ -174,3 +210,37 @@ Redis
 
 
 MongoDB
+
+
+
+
+
+## 安装Node
+### 安装node版本管理（node version manager）
+[nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+# curl方法（二者选一即可）
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+# wget方法
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+```
+
+安装之后
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+source ./zshrc
+```
+
+### 安装node
+```
+command -v nvm
+
+nvm ls-remote
+
+nvm install v12.18.0
+
+```
