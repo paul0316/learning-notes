@@ -47,7 +47,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 ```
 curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
-``
+```
 
 
 **注意：**因为安装 Homebrew 连接的是国外服务器，经常出现安装失败或者安装很慢的问题
