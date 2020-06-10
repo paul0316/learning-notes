@@ -86,6 +86,8 @@ brew search tomcat
 brew install tomcat@8
 ```
 
+安装成功如下图所示
+[tomcat安装完成图](https://tva1.sinaimg.cn/large/007S8ZIlly1gfnn4eohmoj30rd0ih41g.jpg)
 
 
 使用
