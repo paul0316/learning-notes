@@ -114,6 +114,11 @@ cd your_project
 
 ## 工作区和暂存区
 
+![image-20200611003847898](https://tva1.sinaimg.cn/large/007S8ZIlly1gfno2zxph1j30oi0dtwgt.jpg)
+
+还不是最终文件的非正式文件可以先放在暂存区
+
+
 
 
 
